@@ -1,0 +1,66 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black; /* Set background to black */
+}
+
+.text-mask {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: black; /* Ensures area outside text is black */
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 15vw; /* Adjust size as needed */
+  font-family: Arial, sans-serif;
+  color: black; /* Keeps the inside of the text transparent */
+  position: relative;
+  -webkit-text-stroke: 2px white; /* Outline the text */
+  text-align: center;
+  mix-blend-mode: screen; /* Makes video show only within text */
+  z-index: 1; /* Ensure the text is above the video */
+}
+
+/* This pseudo-element masks the area outside the text */
+.text-mask::before {
+  content: "PORTFOLIO";
+  position: absolute;
+  font-size: 30vw;
+  font-family: Arial, sans-serif;
+  color: black;
+  -webkit-text-stroke: 2px white;
+  mix-blend-mode: screen;
+  background-color: black; /* Ensures outside of text remains black */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,43 @@
+const canvas = document.getElementById('fogCanvas');
+const ctx = canvas.getContext('2d');
+
+// Set canvas size
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Fog settings
+ctx.fillStyle = "rgba(255, 255, 255, 0.8)"; // Light fog-like white color
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+// Function to clear fog around cursor
+function clearFog(x, y) {
+  const radius = 50; // Size of the clear area
+  const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
+  gradient.addColorStop(0, "rgba(0, 0, 0, 0)"); // Fully transparent at center
+  gradient.addColorStop(1, "rgba(255, 255, 255, 0.8)"); // Fades to fog color
+
+  ctx.globalCompositeOperation = "destination-out"; // Clear effect
+  ctx.fillStyle = gradient;
+  ctx.beginPath();
+  ctx.arc(x, y, radius, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+// Mousemove event
+canvas.addEventListener("mousemove", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  clearFog(x, y); // Clear fog at mouse position
+});
+
+// Resize canvas on window resize
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  // Reapply fog after resize
+  ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+});

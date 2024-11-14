@@ -1,0 +1,74 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Georgia', serif;
+    color: white;
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    height: 33.33vh; /* Divides the screen into three equal sections */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensures the zoom effect doesn’t exceed section bounds */
+}
+
+/* Header Section Styling */
+.header-section {
+    background-color: black; /* Light grey-beige */
+    color: white;
+}
+
+.header-section .content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.header-section .content p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Skincare Section Styling with Zoom Effect */
+.skincare-section {
+    background-image: url('about\ meee.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+.skincare-section:hover {
+    transform: scale(1.1); /* Scales the section up slightly on hover */
+}
+
+.skincare-section .content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Liquor Section Styling with Zoom Effect */
+.liquor-section {
+    background-image: url('side.jpeg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease; /* Smooth transition effect */
+}
+
+.liquor-section:hover {
+    transform: scale(1.1); /* Scales the section up slightly on hover */
+}
+
+.liquor-section .content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}

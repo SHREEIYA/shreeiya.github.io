@@ -1,0 +1,55 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f0;
+    font-family: Arial, sans-serif;
+}
+
+.container, .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-list {
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #333;
+}
+
+.text-list li {
+    display: flex;
+    gap: 10px;
+}
+
+.text-list li span {
+    color: #777;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: right;
+}
+
+.text-list li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.text-list li a:hover {
+    text-decoration: underline;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}

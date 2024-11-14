@@ -1,0 +1,60 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Existing styles... */
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+/* Background Image */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('download\ \(6\).jpeg') no-repeat center center/cover;
+    font-family: 'Jockey One', sans-serif;
+}
+
+/* Centered Rectangle with Opacity */
+.overlay-box {
+    width: 80%; /* Adjusts width relative to screen size */
+    max-width: 1724px;
+    height: 80vh;
+    max-height: 1085px;
+    background-color: rgba(238, 225, 199, 0.5); /* Color with 50% opacity */
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Centered Text Styling */
+.centered-text {
+    color: #d9dae1;
+    font-size: 2.7rem;
+    padding: 20px;
+}
+
+/* Blinking Cursor */
+#typewriter-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}

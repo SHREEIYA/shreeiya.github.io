@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Gallery</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="gallery.js" defer></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <!-- Header to close the gallery -->
+    <header class="gallery-header">
+        <a href="page 2.html">CLOSE GALLERY</a>
+    </header>
+
+    <!-- Main Gallery Content -->
+    <section class="main-content">
+        <div class="text-content">
+            <p class="slide-number">01/68</p>
+            <h1>EDITORIAL BY SHRIYA SUMEETH.</h1>
+        </div>
+        <div class="main-image">
+            <img id="main-image" src="MAIN.jpeg" alt="Main Editorial Image"> <!-- Main image with an ID -->
+            <p class="image-caption">DESIGN STUDENT <a href="#">2ND YEAR</a></p>
+        </div>
+    </section>
+
+    <!-- Thumbnail Gallery Navigation -->
+    <section class="thumbnail-gallery">
+        <!-- Thumbnails with click functionality to replace main image -->
+        <div class="thumbnail" onclick="updateMainImage('thumb1.jpg')"><img src="gallery.jpeg" alt="Thumbnail 1"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb2.jpg')"><img src="MUMBAI.jpeg" alt="Thumbnail 2"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb3.jpg')"><img src="projects.jpeg" alt="Thumbnail 3"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb4.jpg')"><img src="MUSEM.jpeg" alt="Thumbnail 4"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb5.jpg')"><img src="SHIMLA.jpeg" alt="Thumbnail 5"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb6.jpg')"><img src="PAINT.jpeg" alt="Thumbnail 6"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb7.jpg')"><img src="HORSE.jpeg" alt="Thumbnail 7"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb8.jpg')"><img src="WhatsApp Image 2024-11-13 at 4.43.07 PM.jpeg" alt="Thumbnail 8"></div>
+        <div class="thumbnail" onclick="updateMainImage('thumb9.jpg')"><img src="ME.jpeg" alt="Thumbnail 9"></div>
+    </section>
+</body>
+</html>
+
+
+
+    

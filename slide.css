@@ -1,0 +1,89 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2b2b; /* Dark background */
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    background-color: #f6f6f0; /* Beige background color */
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-right: 1px solid #ccc;
+    overflow-y: auto; /* Scrollable if content exceeds viewport */
+}
+
+.image-grid {
+    column-count: 2; /* Creates a two-column layout */
+    column-gap: 20px;
+}
+
+.image-item {
+    break-inside: avoid; /* Prevents images from breaking into new columns */
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+/* Right Section Styling */
+.right-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-list {
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #333;
+}
+
+.text-list li {
+    display: flex;
+    gap: 10px;
+    color: #333;
+}
+
+.text-list li span {
+    color: #777;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: right;
+}
