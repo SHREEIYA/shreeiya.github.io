@@ -8,7 +8,7 @@
 body {
     font-family: 'Georgia', serif;
     color: #FFF;
-    background-color:  #000;
+    background-color: #000;
 }
 
 /* Header */
@@ -31,13 +31,30 @@ body {
 /* Main Content Layout */
 .main-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 20px;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .text-content {
-    width: 50%;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .text-content {
+        width: 50%;
+        text-align: left;
+    }
 }
 
 .slide-number {
@@ -47,14 +64,26 @@ body {
 }
 
 .text-content h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 1.2;
 }
 
+@media (min-width: 768px) {
+    .text-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
 .main-image {
-    width: 50%;
+    width: 90%;
     text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main-image {
+        width: 50%;
+    }
 }
 
 .main-image img {
@@ -67,6 +96,13 @@ body {
     font-size: 0.9rem;
     color: #888;
     margin-top: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .image-caption {
+        text-align: left;
+    }
 }
 
 .image-caption a {
@@ -83,13 +119,16 @@ body {
 .thumbnail-gallery {
     display: flex;
     overflow-x: auto;
-    padding: 20px 30px; /* Adjust padding to allow more space for thumbnails */
+    padding: 10px 15px;
     gap: 10px;
+    justify-content: center;
 }
 
 .thumbnail {
-    flex: 1; /* Allows each thumbnail to take up equal space in the row */
-    height: 120px; /* Slightly taller height */
+    flex: 1;
+    min-width: 80px;
+    max-width: 120px;
+    height: 100px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -105,6 +144,23 @@ body {
 }
 
 .thumbnail:hover {
-    transform: scale(2.1); /* Scale up the thumbnail on hover */
+    transform: scale(1.1);
     cursor: pointer;
+}
+
+/* Responsive Font Sizes */
+body {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 1.2rem;
+    }
 }

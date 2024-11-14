@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('download\ \(6\).jpeg') no-repeat center center/cover;
+    background: url('maybe.jpeg') no-repeat center center/cover;
     font-family: 'Jockey One', sans-serif;
 }
 
@@ -39,7 +39,7 @@ body {
 
 /* Centered Text Styling */
 .centered-text {
-    color: #d9dae1;
+    color: #361b04;
     font-size: 2.7rem;
     padding: 20px;
 }
